@@ -1,0 +1,352 @@
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="row">
+            <h3>Utilites</h3>
+        </div>
+
+        <div class="row p-2">
+            <nav class="mt-2">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="beneficiarios-tab" data-toggle="tab" href="" data-target="#bnf-beneficiarios"
+                        role="tab" aria-controls="nav-beneficiarios" aria-selected="true"><span data-feather="calendar"></span> Programar Tarefas</a>
+
+
+
+                    <a class="nav-item nav-link" id="materiais-tab" data-toggle="tab" href="" data-target="#bnf-materiais"
+                        role="tab" aria-controls="nav-materiais" aria-selected="false"><span data-feather="edit"></span> Registar Realizados</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row tab-content col-12">
+            <div class="tab-pane fade  show active w-100" id="bnf-beneficiarios" role="tabpanel" aria-labelledby="beneficiarios-tab">
+                <div class="row">
+                    <div class="col p-2 mr-4">
+                        <div class="card p-3 box-shadow border-0">
+                            <div class="graf-title">
+                                <p
+                                    style="cursor: default; color:rgb(117, 117, 117) ; user-select: none;-webkit-font-smoothing: antialiased; font-family: Roboto;font-size: 16px;">
+                                    Programar Tarefas
+                                </P>
+                                <p
+                                    style=" margin-top: -18px; color:rgb(189, 189, 189);; cursor: default; user-select: none;-webkit-font-smoothing: antialiased;font-family: Roboto;font-size: 14px">
+                                    Programe tarefas para serem executadas num dia ou hora especifica.
+                                </p>
+                            </div>
+
+                            <div>
+                                <form class="needs-validation" novalidate>
+                                    <div class="form-row p-2">
+                                        <div>
+                                            <div class="dropdown mr-2">
+                                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   Accao: <b>{{actionSeleced}}</b>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="action('Notify')">Notificar por email</a>
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="action('NewAct')">Criar Actividade</a>
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="action('Upcoming')">up comming</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="dropdown mr-2">
+                                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Relativa a: <b>{{selectRelation}}</b>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="relatedTo('PE')">Plano Estratégico</a>
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="relatedTo('PRO')">Projectos</a>
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="relatedTo('ACT')">Activiadaes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="dropdown mr-2">
+                                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Acionar quando: <b>{{triggerSelected}}</b>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="trigger('done')">Concluido</a>
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="trigger('B5days')">5 dias antes do termino</a>
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="trigger('newPRO')">Nova Projecto criado</a>
+                                                    <a class="dropdown-item" style="cursor:pointer" ng-click="trigger('newACT')">Novo Actividade criada</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="p-2 col-md-12">
+                                        <div class="form-group row mb-0">
+                                            <div class="col-md-5 row">
+                                                <label class="col-md-4 col-form-label text-left">Nome da tarefa</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Notidicao por email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 row">
+                                                <label for="inputPassword" class="col-md-4 col-form-label text-left">Email de teste para:</label>
+                                                <div class="col-md-8">
+                                                    <input type="email" class="form-control" placeholder="email">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <button class="btn btn-primary" type="submit">Criar Tarefa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                            <div>
+                                <div id="grafGenero" style="height: 400px;">
+                                    <div class="col-6 col-lg-7 m-auto" ng-if="loading;">
+                                        <div class="spinner-grow text-warning" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow text-success" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow text-danger" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade w-100" id="bnf-materiais" role="tabpanel" aria-labelledby="materiais-tab">
+                <div class="row">
+                    <div class="col-md-9 p-2 mr-4" style="min-width: 450px !important;">
+                        <div class="card p-3 box-shadow border-0">
+                            <div class="graf-title">
+                                <p
+                                    style="cursor: default; color:rgb(117, 117, 117) ; user-select: none;-webkit-font-smoothing: antialiased; font-family: Roboto;font-size: 16px;">
+                                    Registar realizados
+                                </P>
+                                <p
+                                    style=" margin-top: -18px; color:rgb(189, 189, 189);; cursor: default; user-select: none;-webkit-font-smoothing: antialiased;font-family: Roboto;font-size: 14px">
+                                    ....
+                                </p>
+                            </div>
+
+                            <div>
+                                <div class="dropdown mr-2 dropright">
+                                    <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Projecto <span style="color:#bb0000"> *</span>:
+                                    </button>
+                                    <b> {{selectedPrograma}}</b>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font: 400 14.3333px Arial;">
+                                        <div class="dropdown-item input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><span data-feather="search"></span>
+                                            </div>
+                                            <input style="font: 400 14.3333px Arial;" type="text" class="form-control" ng-model="searchText" placeholder="pesquisar"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+
+                                        <div ng-repeat="(key, value) in responseVars.programas">
+                                            <h6 class="dropdown-header">{{key}}</h6>
+                                            <a href="" ng-repeat="projecto in value | filter:searchText" class="dropdown-item" style="cursor:pointer"
+                                                ng-click="selectPrograma(projecto)">&nbsp;&nbsp;» {{projecto.programa}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown mr-2 mt-3 dropright">
+                                    <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Actividade <span style="color:#bb0000"> *</span>:
+                                    </button>
+                                    <b> {{selectedActividade}}</b>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font: 400 14.3333px Arial;">
+                                        <div class="dropdown-item input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><span data-feather="search"></span>
+                                            </div>
+                                            <input style="font: 400 14.3333px Arial;" type="text" class="form-control" ng-model="searchAct" placeholder="pesquisar"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+
+                                        <div ng-repeat="(key, value) in responseAct.actividades" >
+                                            <h6 class="dropdown-header">{{key}}</h6>
+                                            <a href="" ng-repeat="actividade in value | filter:searchAct"  class="dropdown-item" style="cursor:pointer"
+                                                ng-click="selectActividade(actividade)">&nbsp;&nbsp;» {{actividade.subject}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row m-0 mt-3">
+                                    <div class="row m-0 mb-2">
+                                        <label class="col-form-label text-left btn-sm btn-light border-success border-bottom">Data de Inicio <span style="color:#bb0000"> *</span>:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" ng-model="dueDate" id="startDate" class="form-control form-control-sm" placeholder="mm/dd/yyyy">
+                                        </div>
+                                    </div>
+
+                                    <div class="row m-0 mb-2">
+                                        <label class="col-form-label text-left btn-sm btn-light border-danger border-bottom">Horas <span style="color:#bb0000"> *</span>:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" ng-model="time" id="time" class="form-control form-control-sm" placeholder="1.00">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row m-0">
+                                    <div class="mt-3" id="list_bnf">
+                                        <h6>Indicar Beneficiarios <span style="color:#bb0000"> *</span></h6>
+                                        <form name="regForm" ng-submit="addBeneficiarios(selectedBenf, benValue)" id="regForm" novalidate>
+                                            <div class="dropdown mr-2 row m-0">
+                                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle mr-2" type="button" id="dropdownMenuButton"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Beneficiarios: <b>{{selectedBenf}}</b>
+                                                </button>
+
+                                                <div class="mr-2">
+                                                    <input style="max-width:80px" ng-model='benValue' type="text" class="form-control form-control-sm" placeholder="val" required>
+                                                </div>
+
+                                                <div class="mr-2">
+                                                    <button type="submit" class="btn btn-sm btn-primary" ng-disabled="regForm.$invalid || selectedBenf == null"><span data-feather="plus"></span> Adicionar</button>
+                                                </div>
+
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font: 400 14.3333px Arial;">
+                                                    <div class="p-2" disabled>
+                                                        Selecione a variavel
+                                                    </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="" class="dropdown-item" ng-repeat='benf_vars in responseVars.benf_vars' style="cursor:pointer"
+                                                        ng-click="selectBenf(benf_vars.var, $index)">{{benf_vars.var}}</a>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div class="p-2 border-right mt-2">
+                                            <div class="row m-0" ng-repeat='beneficiarios in objBeneficiarios'>
+                                                {{beneficiarios.var}} »&nbsp;<b>{{beneficiarios.realizado}}</b>
+                                                <a href="" class="ml-3 text-danger" ng-click="delBenf(beneficiarios.var, $index)"><span style="margin-top:4px" data-feather="minus-square"></span></a>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row m-0 mt-3 d-none">
+                                            <div class="row m-2" ng-repeat='benf_vars in responseVars.benf_vars'>
+                                                <label style="min-width:220px; max-width:220px"
+                                                    class="mr-3 col-form-label text-left btn-sm btn-light border-bottom">{{benf_vars.var}}</label>
+                                                <div>
+                                                    <input style="max-width:100px" type="text" class="form-control form-control-sm" placeholder="val">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-3" id="list_material">
+                                        <h6>Indicar Material</h6>
+                                        <form name="regMatForm" ng-submit="addMateriais(selectedMaterial, matValue)" id="regMatForm" novalidate>
+                                            <div class="dropdown mr-2 row m-0">
+                                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle mr-2" type="button" id="dropdownMenuButton"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Materia: <b>{{selectedMaterial}}</b>
+                                                </button>
+
+                                                <div class="mr-2">
+                                                    <input style="max-width:100px" ng-model='matValue' type="text" class="form-control form-control-sm" placeholder="val" required>
+                                                </div>
+
+                                                <div class="mr-2">
+                                                    <button type="submit" class="btn btn-sm btn-primary" ng-disabled="regMatForm.$invalid || selectedMaterial == null"><span data-feather="plus"></span>Adicionar</button>
+                                                </div>
+
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font: 400 14.3333px Arial;">
+                                                    <div class="p-2" disabled>
+                                                        Selecione a variavel:
+                                                    </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="" class="dropdown-item" ng-repeat='material_vars in responseVars.material_vars' style="cursor:pointer"
+                                                        ng-click="selectMaterial(material_vars.var, $index)">{{material_vars.var}}</a>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div class="p-2 mt-2">
+                                            <div class="row m-0" ng-repeat='material in objMaterial'>
+                                                {{material.var}} »&nbsp;<b>{{material.realizado}}</b>
+                                                <a href="" class="ml-3 text-danger" ng-click="delMaterial(material.var, $index)"><span style="margin-top:4px" data-feather="minus-square"></span></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="m-0 mt-4">
+                                    <div class="mt-2 mb-2">
+                                        <div class="row m-0 mb-2">
+                                            <label class="col-form-label text-left btn-sm">Comentário<span style="color:#bb0000"> *</span></label>
+                                            <div class="col-md-8">
+                                                <input type="text" ng-model="comment" id="comment" class="form-control form-control-sm"
+                                                    placeholder="Comentário">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-2 mb-2">
+                                        <div class="row m-0 mb-2">
+                                            <label class="col-form-label text-left btn-sm">Valor Gasto <span style="color:#bb0000"> *</span>:</label>
+                                            <div class="col-md-8">
+                                                <input type="text" ng-model="vGasto" id="vGasto" class="form-control form-control-sm" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-3" id="list_material">
+                                        <div class="mr-2">
+                                            <button type="submit" class="btn btn-sm btn-success" ng-click="gravarReal(comment, vGasto, dueDate, time)"><span data-feather="save"></span>
+                                                Gravar dados</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    feather.replace();
+    $(document).ready(function () {
+        $('#startDate').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+
+        $('#endDate').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    })
+</script>
+<style>
+    .gj-icon {
+        margin-top: -4px;
+    }
+</style>

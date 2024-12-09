@@ -1,0 +1,133 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h3 class="h5">Relatório - Orçamento PDE</h3>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="system/taskReports.php?report=reportOrcamentoPDE&p={{response_projecto.id}}" target="_blank" class="btn btn-sm btn-outline-secondary">
+            Exportar Excel
+        </a>
+    </div>
+</div>
+
+
+
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card p-2 box-shadow border-0 rounded-0 bg-white">
+            <div class="row m-1">
+                <div class="d-flex">
+                    <div class="p-2">
+                        <form name="f_provincias" method="get" id="f_provincias" class="mt-3">
+                            <select class="custom-select d-block w-100" id="p" name="p" ng-bind-html="response_projectos">
+                            </select>
+                        </form>
+                        <script>
+                            $(document).ready(function () {
+                                // Links heligth
+                                $("#p").change(function () {
+                                    var action = this.value;
+                                    location.assign("#relatorio/report/orcamento/pde/" + p);
+                                });
+                            });
+
+                            document.getElementById('f_provincias').p.onchange = function () {
+                                var p = this.value;
+                                document.getElementById('f_provincias').action = p;
+                                location.assign("#relatorio/report/orcamento/pde/" + p);
+                            };
+                        </script>
+                    </div>
+
+                    <div class="p-2">
+                        Filtro
+                        <br>
+                        <div class="btn-group">
+                            <div class="dropdown mr-2">
+                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Por Ano: <b>{{selectYear}}</b>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByYear('todos')">Todos</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByYear(data.ano)"
+                                        ng-repeat='data in response_anoFilter'>{{data.ano}}</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown mr-2">
+                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Por Periodo: <b>{{selectPeriodo}}</b>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('1T')">1 Trimestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('2T')">2 Trimestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('3T')">3 Trimestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('3T')">4 Trimestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('1S')">1 Semestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('2S')">2 Semestre</a>
+                                </div>
+                            </div>
+                            <div class="dropdown mr-2">
+                                <div class="m-0">
+                                    <input class="form-control form-control-sm" ng-model="startDate" id="startDate" type="text" ng-model="startDate"
+                                        placeholder="Data de Inicio" required>
+
+                                </div>
+                            </div>
+
+                            <div class="dropdown mr-2">
+                                <input class="form-control form-control-sm" ng-model="endDate" id="endDate" type="text" ng-model="endDate"
+                                    placeholder="Data de Fim" required>
+                            </div>
+
+                            <button class="btn btn-sm btn-success border-bottom" ng-click="getByDate(startDate, endDate)">Pesquisar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="p-2 ml-2 mt-0">
+                    Plano Estratégico:
+                    <h5>{{response_projecto.nome_plano}}</h5>
+                </div>
+
+                <div class="p-2 ml-2 mt-0">
+                    Objectivo Geral:
+                    <h6>{{response_OjectivoGeral}}</h6>
+                </div>
+            </div>
+            <div class="table-responsive tableFixHead">
+                <table class="table display datatable-responsive table-bordered table-striped table-sm" ng-bind-html="response"  ng-if="!loading;">
+                </table>
+
+                <div class="col-3 col-lg-2 m-auto" ng-if="loading;">
+                    <div class="spinner-grow text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <span ng-if="response" ng-bind-html="loadtable"></span>
+        </div>
+    </div>
+</div>
+    <script>
+        $(document).ready(function () {
+            $('#startDate').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+
+            $('#endDate').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+        })
+    </script>
+    <style>
+        .gj-icon {
+            margin-top: -4px;
+        }
+    </style>

@@ -1,0 +1,1024 @@
+============= CHANGELOG =============
+
+Version 3.4.6-5      2018-12-11
+* Fix CPAN command shebang
+* Updated lego to 1.2.1
+* Updated OpenSSL to 1.0.2q
+* Updated PHP to 7.1.25
+* Updated Redmine to 3.4.6
+* Updated Subversion to 1.11.0
+
+Version 3.4.6-4      2018-11-06
+* Fixed SpectreRSB Vulnerability (CVE-2018-15572)
+* Updated Apache to 2.4.37
+* Updated lego to 1.1.0
+* Updated MySQL to 5.6.42
+* Updated PHP to 7.1.23
+* Updated Ruby to 2.3.8
+* Updated Subversion to 1.10.3
+
+Version 3.4.6-3      2018-10-09
+* Updated Apache to 2.4.35
+* Updated Git to 2.19.1
+
+Version 3.4.6-2      2018-09-27
+* Added Lego tool for configuring Let's encrypt with Apache
+* Updated PHP to 7.1.22
+* Updated phpMyAdmin to 4.8.3
+* Updated lego to 1.0.1
+
+Version 3.4.6-1      2018-08-22
+* Updated Apache to 2.4.34
+* Updated MySQL to 5.6.41
+* Updated OpenSSL to 1.0.2p
+* Updated PHP to 7.1.21
+* Updated phpMyAdmin to 4.8.2
+* Updated Subversion to 1.10.2
+
+Version 3.4.6-0      2018-06-10
+* Updated Redmine to 3.4.6
+
+Version 3.4.5-1      2018-06-01
+* Updated Git to 2.17.1 (Security release CVE-2018-11235)
+* Updated PageSpeed to 1.13.35.2
+* Updated MySQL to 5.6.40
+* Updated PHP to 7.1.18
+* Updated phpMyAdmin to 4.8.1
+* Updated SQLite to 3.18.0
+* Updated Subversion to 1.10.0
+
+Version 3.4.5-0      2018-04-07
+* Updated Apache to 2.4.33
+* Updated OpenSSL to 1.0.2o
+* Updated PHP to 7.1.16
+* Updated Redmine to 3.4.5
+* Updated Ruby to 2.3.7
+
+Version 3.4.4-3      2018-03-13
+* Updated DHCP package in Virtual Machines and cloud images: CVE-2018-5732
+* Updated PHP to 7.1.15
+* Updated phpMyAdmin to 4.7.9
+
+Version 3.4.4-2      2018-02-23
+* Generate the SSL certificates at installation time
+(boot time in the cloud images and virtual machines)
+* Updated MySQL to 5.6.39
+* Updated PHP to 7.1.14
+* Updated phpMyAdmin to 4.7.8
+
+Version 3.4.4-1      2018-01-11
+* Improved OS X VM images
+
+Version 3.4.4-0      2018-01-11
+* Updated PHP to 7.1.13
+* Updated phpMyAdmin to 4.7.7
+* Updated Redmine to 3.4.4
+
+Version 3.4.3-2      2018-01-02
+* Updated OpenSSL to 1.0.2n
+* Updated PHP to 7.1.12
+* Updated phpMyAdmin to 4.7.6
+* Updated Ruby to 2.3.6
+
+Version 3.4.3-1      2017-11-01
+* Add bnsupport tool
+* Updated Apache to 2.4.29
+* Updated MySQL to 5.6.38
+* Updated PHP to 7.1.11
+
+Version 3.4.3-0      2017-10-25
+* Updated Apache to 2.4.28
+* Updated OpenSSL to 1.0.2l
+* Updated Redmine to 3.4.3
+
+Version 3.4.2-4      2017-09-25
+* Fixed several security vulnerabilities in Ruby (CVE-2017-14033, CVE-2017-0898, CVE-2017-10784, CVE-2017-14064)
+* Updated Ruby to 2.3.5
+
+Version 3.4.2-3      2017-09-06
+* Update Rubygems to version 2.6.13 (several security fixes)
+* Updated phpMyAdmin to 4.7.4
+
+Version 3.4.2-2      2017-08-15
+* Updated Git to 2.14 in OS-X (Fix CVE-2017-1000117)
+
+Version 3.4.2-1      2017-08-11
+* Updated Git to 2.14 in Windows and Linux (Fix CVE-2017-1000117)
+* Updated MySQL to 5.6.37
+* Updated Subversion to 1.9.7
+
+Version 3.4.2-0      2017-07-19
+* Updated Redmine to 3.4.2
+* Updated phpMyAdmin to 4.7.2
+* Updated Apache to 2.4.27
+
+Version 3.4.1-0      2017-07-10
+* Updated Redmine to 3.4.1
+* Updated PHP to 5.6.31
+* Updated phpMyAdmin to 4.7.1
+* Fix sudo vulnerability (CVE-2017-1000367)
+
+Version 3.3.3-1      2017-06-05
+* Updated OpenSSL to 1.0.2l
+* Updated MySQL to 5.6.36
+* Updates Ruby to 2.3.3
+* Updated Passenger to 5.1.2
+* Updated ImageMagick to 6.9.8 (Security fixes for CVE-2015-8902, CVE-2016-5240, CVE-2015-8903, CVE-2015-8900 and CVE-2015-8901)
+
+Version 3.3.3-0      2017-04-10
+* Updated Redmine to 3.3.3
+* Updated phpMyAdmin to 4.7.0
+
+Version 3.3.2-2      2017-02-24
+* Fixed an issue with the Bitnami Installer license
+
+Version 3.3.2-1      2017-02-22
+* Fixed log issue
+
+Version 3.3.2-0      2017-02-09
+* Updated Redmine to 3.3.2
+* Updated phpMyAdmin to 4.6.6
+* Updated OpenSSL to 1.0.2k (Security fixes for CVE-2017-3731, CVE-2017-3731, CVE-2017-3731, and CVE-2016-7055)
+* Updated PHP to 5.6.30
+* Updated Apache to 2.4.25
+* Updated MySQL to 5.6.35
+* Updated Subversion to 1.9.5
+
+Version 3.3.1-0      2016-10-12
+* Updated Redmine to 3.3.1
+
+Version 3.3.0-3      2016-10-11
+* Updated documentation links in the Bitnami information page
+
+Version 2.6.10-4      2016-10-03
+* Updated OpenSSL to 1.0.2j (Security fix CVE-2016-6304)
+
+Version 3.3.0-2      2016-09-29
+* Updated OpenSSL to 1.0.2j (Security fix CVE-2016-6304)
+* Updated MySQL to 5.6.33
+* Updated PHP to 5.6.26
+* Updated phpMyAdmin to 4.6.4
+* Patched Off-Path TCP Linux Kernel Vulnerability in Cloud Images and Virtual Machines (Security release CVE-2016-5696)
+* Updated Ruby to 2.1.10
+* Blocked Proxy request header in the web server (Security issue CVE-2016-5385, CVE-2016-5387, CVE-2016-1000110)
+* Updated Subversion to 1.9.4 (only for Linux and OSX)
+* Removed Subversion from the Windows installer
+* Updated Apache to 2.4.23
+
+Version 3.3.0-1      2016-07-01
+* Fixed a bug in Windows related to crashing with PATH longer than 256 characters
+* Updated PHP to 5.6.23
+
+Version 3.3.0-0      2016-06-21
+* Updated Redmine to 3.3.0
+
+Version 3.2.3-1      2016-06-16
+* Fixed redirection issue in the Azure cloud
+
+Version 3.2.3-0      2016-06-06
+* Updated Redmine to 3.2.3
+* Updated MySQL to 5.6.31
+* Updated phpMyAdmin to 4.6.2
+* Updated PHP to 5.6.22 (Security release CVE-2016-5096, CVE-2016-5094, CVE-2013-7456, CVE-2016-5093)
+* Updated Subversion to 1.8.16 solving CVE-2015-3184, CVE-2015-3187, CVE-2016-216 and CVE-2016-2168
+
+Version 2.6.10-3      2016-05-11
+* Updated PHP to 5.6.21 (Security release CVE-2016-3074)
+
+Version 3.2.2-0      2016-05-09
+* Updated Redmine to 3.2.2
+* Updated phpMyAdmin to 4.6.1
+* Updated PHP to 5.6.21 (Security release CVE-2016-3074)
+
+Version 2.6.10-2      2016-05-06
+* Updated policy of ImageMagick (disabled TEXT, SHOW, WIN, PLT) (Security CVE-2016-3714)
+
+Version 3.2.1-2      2016-05-06
+* Updated policy of ImageMagick (disabled TEXT, SHOW, WIN, PLT) (Security CVE-2016-3714)
+
+Version 2.6.10-1      2016-05-05
+* Modified policy of ImageMagick (Security CVE-2016-3714)
+* Updated OpenSSL to 1.0.2h (Security release CVE-2016-2108 CVE-2016-2107)
+
+Version 3.2.1-1      2016-05-05
+* Modified policy of ImageMagick (Security CVE-2016-3714)
+* Updated OpenSSL to 1.0.2h (Security release CVE-2016-2108 CVE-2016-2107)
+* Updated PHP to 5.6.21 (Security release CVE-2016-3074)
+* Updated PageSpeed to 1.9.32.14
+* Updated MySQL to 5.6.30
+* Updated Apache to 2.4.20
+* Updated phpMyAdmin to 4.6.0
+* Added support to 10+ extra languages
+
+Version 3.2.1-0      2016-03-17
+* Updated Redmine to 3.2.1
+
+Version 2.6.10-0      2016-03-15
+* Updated Redmine to 2.6.10
+* Updated phpMyAdmin to 4.5.5.1
+* Updated PHP to 5.6.19
+* Updated OpenSSL to 1.0.2g (Security release CVE-2016-0800)
+
+Version 3.2.0-2      2016-02-15
+* Updated MySQL to 5.6.29
+* Updated PHP to 5.6.18
+
+Version 2.6.9-4      2016-02-03
+* Updated OpenSSL to 1.0.2f (Security release CVE-2016-0701)
+
+Version 2.6.9-3      2016-01-25
+* Updated OpenSSL to 1.0.2e
+
+Version 2.6.9-2      2016-01-16
+* Fixed OpenSSH vulnerability (CVE-2016-0777 and CVE-2016-0778)
+
+Version 3.2.0-1      2016-01-15
+* Fixed OpenSSH vulnerability (CVE-2016-0777 and CVE-2016-0778)
+* Updated libpng to 1.5.26 (Security release CVE-2015-8540)
+* Updated Ruby to 2.1.8
+* Updated Apache to 2.4.18
+* Updated MySQL to 5.6.28
+
+Version 2.6.9-0      2015-12-07
+* Updated Redmine to 2.6.9
+
+Version 3.2.0-0      2015-12-07
+* Updated Redmine to 3.2.0
+* Updated OpenSSL to 1.0.1q
+* Updated phpMyAdmin to 4.5.2
+
+Version 3.1.2-0      2015-11-17
+* Updated Redmine to 3.1.2
+
+Version 2.6.8-0      2015-11-17
+* Updated Redmine to 2.6.8
+* Updated libpng to 1.5.24 (security issue)
+* Updated MySQL to 5.6.27
+* Updated Apache to 2.4.17
+
+Version 2.6.7-1      2015-10-06
+* Fixed installation for OSX 10.11 El Capitan
+
+Version 3.1.1-1      2015-10-06
+* Fixed installation for OSX 10.11 El Capitan
+
+Version 2.6.7-0      2015-09-22
+* Updated Redmine to 2.6.7
+
+Version 3.1.1-0      2015-09-21
+* Updated Redmine to 3.1.1
+* Updated PHP to 5.5.29
+* Updated phpMyAdmin to 4.4.13.1
+* Updated Apache to 2.4.16
+
+Version 3.1.0-0      2015-07-28
+* Updated Redmine to 3.1.0
+
+Version 2.6.6-0      2015-07-13
+* Updated OpenSSL to 1.0.1p
+
+Version 3.0.4-1      2015-07-10
+* Updated OpenSSL to 1.0.1p
+
+Version 3.0.4-0      2015-07-09
+* Updated Redmine to 3.0.4
+* Updated PHP to 5.5.26
+
+Version 2.6.5-0      2015-05-25
+* Updated PHP to 5.5.25
+* Updated phpMyAdmin to 4.4.7
+
+Version 3.0.3-0      2015-05-13
+* Updated Redmine to 3.0.3
+* Dropping RC4 from Apache SSLCipherSuite directive
+
+Version 3.0.2-0      2015-04-27
+* Updated Redmine to 3.0.2
+
+Version 2.6.4-0      2015-04-27
+* Updated Redmine to 2.6.4
+* Updated phpMyAdmin to 4.4.3
+* Updated PHP to 5.4.40
+* Updated Ruby to 2.0.0-p645
+* Updated Passenger to 5.0.6
+* Updated OpenSSL to 1.0.1m
+
+Version 2.6.3-0      2015-03-20
+* Updated Redmine to 2.6.3
+* Updated Ruby to 2.0.0-p643
+* Updated Passenger to 5.0.4
+
+Version 3.0.1-0      2015-03-18
+* Updated OpenSSL to 1.0.1l
+* Fixed binaries for Git
+* Updated PHP to 5.4.38
+
+Version 3.0.0-0      2015-02-26
+* Updated Redmine to 3.0.0-0
+
+Version 2.6.2-0      2015-02-21
+* Updated Redmine to 2.6.2
+* Updated PHP to 5.4.37
+* Updated Apache to 2.4.12
+* Updated MySQL to 5.5.42 for Linux and Windows
+* Updated PageSpeed to 1.9.32.3
+* Updated phpMyAdmin to 4.3.8
+* Fixed subversion dependency issue on OS X
+
+Version 2.6.1-1      2015-01-23
+* Fixed installer issue with Japanese translation
+* Updated redcarpet gem to 2.3.0 for Windows
+* Updated Passenger to 4.0.57
+* Updated OpenSSL to 1.0.1k (Linux and OS X)
+
+Version 2.6.1-0      2015-01-12
+* Updated Redmine to 2.6.1
+* Updated phpMyAdmin to 4.3.3
+* Updated PHP to 5.4.36
+
+Version 2.6.0-3      2014-12-22
+* Updated Git to 1.9.5
+* Fixed Error with ImageMagick on Windows
+
+Version 2.6.0-2      2014-11-28
+* Updated PHP to 5.4.35
+* Updated phpMyAdmin to 4.2.12
+* Updated Ruby to 2.0.0-p594
+* Updated Passenger to 4.0.53
+* Updated Rails to 4.1.7
+
+Version 2.6.0-2      2014-11-25
+* Fixed RMagick issue
+
+Version 2.6.0-1      2014-10-29
+* Fixed SMTP configuration
+
+Version 2.6.0-0      2014-10-23
+* Updated Redmine to 2.6.0
+* Fix MySQL startup issue for OS X Yosemite
+* Updated PHP to 5.4.34
+* Updated OpenSSL to 1.0.1j
+* Added OCI8 module. It requires InstantClient 11.2.
+
+Version 2.5.2-3      2014-10-08
+* Updated phpMyAdmin to 4.2.9.1
+* Updated MySQL to 5.5.40
+* Signed with codesign v2
+* Updated PHP to 5.4.33
+* Updated Passenger to 4.0.50
+* Updated phpMyAdmin to 4.2.8
+
+Version 2.5.2-2      2014-08-27
+* Added banner with credentials info (VMs and Cloud Images)
+* Updated MySQL to 5.5.39
+* Updated PHP to 5.4.32
+* Updated OpenSSL to 1.0.1i
+* Updated phpMyAdmin to 4.2.7.1
+* Updated Rails to 4.1.5
+* Updated Bundler to 1.7.0
+
+Version 2.5.2-1      2014-07-30
+* Updated Ruby to 2.0.0-p481
+* Updated Apache to 2.4.10
+* Updated PHP to 5.4.31
+* Updated MySQL to 5.5.38
+* Updated XDebug to 2.2.5
+* Updated XCache to 3.1.0
+* Updated mongo-php-driver to 1.5.4
+* Updated php-couchbase to 1.1.5
+* Updated Passenger to 4.0.45
+* Updated Libxslt to 1.1.28
+* Updated Libxml2 to 2.9.1
+
+Version 2.5.2-0      2014-07-07
+* Updated PHP to 5.4.30
+* Updated phpMyAdmin to 4.2.5
+* Added hook scripts to Subversion
+
+Version 2.5.1-2      2014-06-23
+* Updated OpenSSL to 1.0.1h
+* Updated Passenger to 4.0.44
+* Updated Ruby to 1.9.3-p547 on Linux and OS X
+* Updated PHP to 5.4.29
+* Updated phpMyAdmin to 4.2.2
+* Updated Passenger to 4.0.41
+* Added libv8 and v8js PHP extension for Linux and OS X
+
+Version 2.5.1-1      2014-04-08
+* Updated OpenSSL to 1.0.1g
+
+Version 2.5.1-0      2014-03-31
+* Updated phpMyAdmin to 4.1.12
+* Improved Apache configuration for PHP-FPM mode
+* Updated Apache to 2.4.9
+* Updated Passenger to 4.0.40
+* Updated Git to 1.9.0
+* Updated Subversion to 1.8.8 in Linux and OS X
+* Updated Passenger to 4.0.37
+* Updated PHP to 5.4.26
+* Updated phpMyAdmin to 4.1.9
+
+Version 2.5.0-0      2014-03-03
+* Updated Redmine to 2.5.0
+* Updated MySQL to 5.5.36
+* Updated Ruby to 1.9.3-p545
+
+Version 2.4.3-0      2014-02-10
+* Updated Redmine to 2.4.3
+* Update libyaml to 0.1.5
+* Updated phpMyAdmin to 4.1.4
+* Updated PHP to 5.4.24
+* Updated Subversion to 1.8.5
+* Updated OpenSSL to 1.0.1f in Linux and OSX
+* Updated Git to 1.8.5.2
+* Updated Passenger to 4.0.33
+
+Version 2.4.2-0      2013-12-26
+* Updated Redmine to 2.4.2
+* Updated phpMyAdmin to 4.1.0
+* Updated PHP to 5.4.23
+
+Version 2.4.1-1      2013-12-04
+* Updated Rails to 3.2.16
+
+Version 2.4.1-0      2013-11-26
+* Updated Redmine to 2.4.1
+
+Version 2.4.0-1      2013-11-22
+* Updated Ruby to 1.9.3-p484 for Linux and OSX
+
+Version 2.4.0-0 2013-11-18
+* Updated Redmine to 2.4.0
+
+Version 2.3.3-1 2013-09-24
+* Fix SSL support for Subversion on Unix
+
+Version 2.3.3-0 2013-09-16
+* Updated Redmine to 2.3.3
+
+Version 2.3.2-2 2013-09-10
+* Updated Subversion to 1.8.3
+
+Version 2.3.2-1      2013-08-21
+* Fixed conflicts with thin server on Windows
+* Updated PHP to 5.4.18
+
+Version 2.3.2-0      2013-07-15
+* Updated Redmine to 2.3.2
+* Added mod_pagespeed 1.6.29.2 for Linux
+
+Version 2.3.1-3      2013-06-28
+* Upgrade Ruby to 1.9.3-p448 for Linux and OSX
+* Updated MySQL to 5.5.32
+
+Version 2.3.1-2      2013-06-25
+* Updated PHP to 5.4.16
+* Updated phpMyAdmin to 4.0.3
+* Updated Git to 1.8.3
+* Upgrade Ruby to 1.9.3-p429 for Linux and OSX
+* Updated Passenger to 4.0.2
+
+Version 2.3.1-0      2013-05-02
+* Updated Redmine to 2.3.1
+* Updated Apache to 2.4.4
+* Added Apache MPM prefork, worker and event
+* Updated Perl to 5.16.3
+* Updated mod_perl to 2.0.8-dev
+
+Version 2.3.0-2      2013-04-26
+* Added patches that improve Ruby 1.9.3 for Linux and OSX.
+
+Version 2.3.0-1      2013-04-24
+* Updated MySQL to 5.5.30
+* Updated Git to 1.8.2
+* Added patches that improve Ruby 1.9.3 for Windows.
+
+Version 2.3.0-0      2013-03-20
+* Updated Redmine to 2.3.0
+* Updated Rails to 3.2.13 to fix CVE-2013-1855,
+CVE-2013-1856 and CVE-2013-1857.
+* Updated PHP to 5.4.13
+* Updated Apache to 2.2.24
+* Updated Ruby to 1.9.3-p392
+* Updated MySQL to 5.5.29
+* Updated Passenger to 4.0.0.rc4
+
+Version 1.4.7-2      2013-02-20
+* Updated Rails to 2.3.17 and json to 1.7.7 to fix CVE-2013-0269,
+CVE-2013-0276 and CVE-2013-0277.
+
+Version 2.2.3-0      2013-02-19
+* Updated Redmine to 2.2.3
+* Updated Rails to 3.2.12 to fix CVE-2013-0269,
+CVE-2013-0276 and CVE-2013-0277.
+
+Version 1.4.7-1      2013-01-30
+* Updated Redmine to 1.4.7
+
+Version 2.2.2-0      2013-01-21
+* Updated Redmine to 2.2.2
+
+Version 1.4.6-1      2013-01-15
+* Added fix for Active Record with JSON CVE-2013-0155 in activerecord-2.3.15
+
+Version 1.4.6-0      2013-01-14
+* Updated Redmine to 1.4.6
+
+Version 2.2.1-0      2013-01-11
+* Updated Redmine to 2.2.1
+
+Version 2.1.6-0      2013-01-10
+* Updated Redmine to 2.1.6
+
+Version 1.4.5-1      2013-01-10
+* Updated Rails to 3.2.11 to fix Unsafe Query Generation Risk in Ruby on
+Rails (CVE-2013-0155) and Multiple vulnerabilities in parameter parsing
+in Action Pack (CVE-2013-0156) in Rails 3.2.10
+
+Version 2.2.0-1      2013-01-08
+* Updated Rails to 3.2.10 to fix SQL injection CVE-2012-5664 in Rails 3.2.9
+
+Version 2.2.0-0      2012-12-19
+* Updated Redmine to 2.2.0
+* Updated PHP to 5.4.9
+* Downgrade the Ruby version on Windows
+to 1.9.3p194 to fix the issue with plugins:
+http://www.redmine.org/boards/4/topics/34353
+
+Version 2.1.5-0      2012-12-19
+* Updated Redmine to 2.1.5
+* Updated PHP to 5.4.9
+* Downgrade the Ruby version on Windows
+to 1.9.3p194 to fix the issue with plugins:
+http://www.redmine.org/boards/4/topics/34353
+
+Version 2.1.4-0      2012-12-14
+* Updated Redmine to 2.1.4
+* Fixed ImageMagick issue with fonts on Linux 64bit
+
+Version 1.4.5-0      2012-11-20
+* Updated Redmine to 1.4.5
+* Updated APC to 3.1.13
+
+Version 2.1.3-0      2012-11-19
+* Updated Redmine to 2.1.3
+* Updated APC to 3.1.13
+* Fixed Passenger issue with athlon kernel
+
+Version 1.4.4-1      2012-11-16
+* Updated Ruby to 1.9.3-p327
+* Updated MySQL to 5.5.28
+* Updated Rails to 3.2.9
+* Updated Passenger to 3.9.1.beta
+* Added DevKit
+
+Version 2.1.2-1      2012-10-31
+* Updated Apache to 2.2.23
+* Fixed ImageMagick issue with fonts
+* Configured ImageMagick to support thumbnails
+* Updated PHP to 5.3.18
+* Updated phpMyAdmin to 3.5.3
+
+Version 2.1.2-0      2012-10-02
+* Updated Redmine to 2.1.2
+
+Version 2.1.0-0      2012-09-18
+* Updated Redmine to 2.1.0
+
+Version 2.0.4-0      2012-09-18
+* Updated Redmine to 2.0.4
+* Updated Ruby to 1.8.7-p370
+* Updated Passenger to 3.0.17
+* Updated PHP to 5.3.17
+* Updated phpMyAdmin to 3.5.2.2
+* Updated aws-sdk-ruby 1.6.5
+* Fixed uninstallation backup issue for Redmine module
+* Fixed Passenger issue with athlon kernel
+
+Version 1.4.4-0-r01 (Windows)   2012-07-25
+* Fixed Git issue on Windows
+* Updated eventmachine for Windows
+
+Version: 1.4.4-0      2012-06-20
+* Updated Redmine to 1.4.4
+* Fixed issue with ImageMagick and fonts on Linux and OS X
+
+Version: 2.0.3-1      2012-06-20
+* Updated Redmine to 2.0.3
+* Fixed issue with ImageMagick and fonts on Linux and OS X
+* Updated Rails 2.3.6 for Redmine 2.0
+
+Version: 1.4.3-0      2012-06-11
+* Update Redmine to 1.4.3
+* Configuration improvement to use Passenger (OS X and Linux) for 1.4.3 version
+* Configuration improvement to use Thin (Windows) for 1.4.3 version
+
+Version: 2.0.2-0      2012-06-08
+* Update Redmine to 2.0.2
+* Update Rails 3.2.5 for Redmine 2.0.2
+
+Version: 2.0.1-0      2012-05-29
+* Update Redmine to 2.0.1
+
+Version: 2.0.0-0      2012-05-24
+* Updated Redmine to 2.0.0
+* Update Rails to 3.2.3
+* Configuration improvement to use Passenger (OS X and Linux)
+* Configuration improvement to use Thin (Windows)
+
+Version: 1.4.2-1      2012-05-17
+* Update PHP to 5.3.13
+* Update OpenSSL to 1.0.1c
+* Fix CA cert issue with Git
+* Fix openssl version issue
+* Add Digets::SHA perl module for advanced Subversion integration
+
+Version: 1.4.2-0      2012-05-14
+* Update Redmine to 1.4.2
+* Update PHP to 5.3.12
+* Update phpMyAdmin to 3.5.1
+
+Version: 1.4.1-0      2012-04-27
+* Updated Redmine to 1.4.1
+
+Version: 1.4.0-0      2012-04-16
+* Updated Redmine to 1.4.0
+* Added coderay 1.0.6
+* Added fastercsv 1.5.4
+* Added net-ldap 0.3.1
+* Added ruby-openid 2.1.8
+* Added tzinfo 0.3.33
+
+Version: 1.3.2-1      2012-04-03
+* Add support for Russian language
+* Updated Ruby to 1.8.7-p358
+* Updated MySQL 5.5.21
+* Updated PostgreSQL addon to 9.1.3
+* Updated SQLite to 3.7.10
+* Updated Subversion to 1.7.4
+* Updated Git to 1.7.9.4
+* Updated libraries for Linux and OSX:
+- OpenSSL to 1.0.1
+- zlib 1.2.6
+- OpenLDAP to 2.4.23
+- ncurses 5.9
+- bzip2 1.0.6
+- libpng to 1.5.9
+- tiff to 4.0.1
+- jpeg to 8d
+- freetype to 2.4.8
+- ImageMagick to 6.7.5
+- expat 2.0.1
+- cyrus-sasl to 2.1.25
+- gmp to 4.3.1
+- curl to 7.24.0
+- libiconv to 1.14
+- imap to 2007f
+- libxml2 to 2.7.8
+- libxslt to 1.1.26
+- icu4c to 4_8_1_1
+
+
+Version: 1.3.2-0      2012-03-12
+* Update Redmine to 1.3.2
+* Update Apache to 2.2.22
+* Update AWS SDK for Ruby to 1.3.6
+* Update phpMyAdmin to 3.4.10.1
+* Downgrade i18n version to 0.4.2 to fix image export issue
+
+Version: 1.3.1-1      2012-02-22
+* Add support for German and Romanian languages
+
+Version: 1.3.1-0      2012-02-07
+* Update Redmine to 1.3.1
+* Add support for Korean and Hebrew, thanks to Shin and Yaron Shahrabani
+* Update PHP to 5.3.10
+* Update phpMyAdmin to 3.4.9
+* Update AWS SDK for Ruby to 1.2.5
+* Update AWS SDK for PHP to 1.5.0
+
+Version: 1.3.0-1      2011-12-22
+* Add support for Korean and Simplified Chinese languages, thanks to
+Shin (bomber) and deng kangming (Dengkangming).
+* Add phpMyAdmin optional component
+* Be able to install PHP applications modules on top
+of the Redmine Stack
+* Updated gems
+
+Version: 1.3.0-0      2011-12-12
+* Update Redmine to 1.3.0
+* Update Rails to 2.3.14
+* Update Subversion to 1.7.1
+* Update Git to 1.7.8
+* Update passenger to 3.0.11
+* Update MySQL to 5.5.16 for Linux and OS X
+* Update AWS SDK for Ruby to 1.2.4
+
+Version: 1.2.2-0      2011-11-15
+* Update Redmine to 1.2.2
+* Add gem bundler 1.0.18
+* Fix git wrapper
+
+Version: 1.2.1-2      2011-09-16
+* Added mail support with SMTP
+
+Version: 1.2.1-1      2011-08-01
+* Add support for Japanese and Spanish languages
+* Disable MySQL binary logging
+* Japanese translation kindly contributed by Kei SAKAI from ARTRY Ltd.
+http://artry.co.jp/  (twitter: @sakaik)
+
+Version: 1.2.1-0      2011-07-12
+* Update Redmine to 1.2.1
+* Add graphical tool for managing servers
+
+Version: 1.2.0-0      2011-06-27
+* Add Linux 64 bits support
+* Updated Redmine to 1.2.0
+* Add TIFF support on Linux
+
+Version: 1.1.3-1      2011-05-20
+* Don't allow to execute the ctlscript.sh script as root when the stack is installed as a non root user
+* Updated ruby to 1.8.7-p334
+* Updated rubygems to 1.6.2
+* Updated nginx to 1.0.2
+* Updated git 1.7.4
+* Updated passenger 3.0.7 (only for Linux)
+* Update SQLite to 1.3.3
+* Added DBD::MySQL cpan module
+* Updated gem rails 2.3.11
+* Updated several gems (check RubyStack changelog)
+
+Version: 1.1.3-0      2011-05-02
+* Update Redmine to 1.1.3
+
+Version: 1.1.2-1      2011-03-25
+* Fix utf8 database support
+* Update MySQL to 5.1.56
+
+Version: 1.1.2-0      2011-03-09
+* Update Redmine to 1.1.2
+* Update Subversion to 1.6.15
+
+Version: 1.1.1-0      2011-02-24
+* Updated Redmine to 1.1.1
+* Added mod_ldap and mod_authnz_ldap modules for Linux and OS X
+
+Version: 1.1.0-0      2011-01-13
+* Updated Redmine to 1.1.0
+* Added gem i18n 0.4.2
+
+Version: 1.0.4-0      2010-12-23
+* Update Redmine to 1.0.4
+* Fix libncursesw dependencies for Linux 64 bits
+
+Version: 1.0.3-0      2010-11-05
+* Update Redmine to 1.0.3
+* Update Apache to 2.2.17
+
+Version: 1.0.2-0      2010-10-13
+* Update Redmine to 1.0.2
+* Update MySQL to 5.1.50
+* Update Apache to 2.2.16
+* Update OpenSSL to 0.9.8o
+* Update Subversion to 1.6.12
+* Set version information for openSSL on Linux
+* Fixed perl files which were not being substituted corectly
+* Updated rubygems to 1.3.7
+* Updated gem rails to 2.3.9
+* Updated gem actionmailer to 2.3.9
+* Updated gem actionpack to 2.3.9
+* Updated gem activerecord to 2.3.9
+* Updated gem activeresource to 2.3.9
+* Updated gem activesupport to 2.3.9
+* Updated gem rack to 1.1.0
+
+Version: 1.0.1-0      2010-08-24
+* Update Redmine to 1.0.1
+
+Version: 1.0.0-0    2010-07-22
+* Update Redmine to 1.0.0
+
+Version: 0.9.6      2010-07-15
+* Update Redmine to 0.9.6
+
+Version: 0.9.5	    2010-06-30
+* Update Redmine to 0.9.5
+
+Version: 0.9.4      2010-05-07
+* Set version information for openSSL on Linux
+* Update Redmine to 0.9.4
+
+* Replaced Ruby and gems with their mingw32 version in Windows.
+* Fixed openssl binary (Windows)
+* Removed some unnecessary files to reduce stack size
+* Updated Ruby to 1.8.7-p249 (Linux, Windows)
+* Downgraded Ruby to 1.8.7-p174 to avoid SEGFAULT errors (OS X)
+* Updated Apache to 2.2.14
+* Updated Git to 1.7.0.5 (Unix)
+* Updated Git to 1.7.0.2 (Windows)
+
+* Added gem mini_magick 1.2.5
+* Updated gem passenger to 2.2.11
+* Updated gem god to 0.9.0
+* Updated gem thinking-sphinx to 1.3.16
+* Updated gem memcache-client to 1.8.2
+* Updated gem capistrano to 2.5.18
+* Updated gem RedCloth to 4.2.3
+* Updated gem bluecloth to 2.0.7
+* Updated gem net-sftp to 2.0.4
+* Updated gem net-ssh to 2.0.21
+* Updated gem highline to 1.5.2
+* Updated gem rubyforge to 2.0.4
+* Updated gem json to 1.2.4
+* Updated gem json_pure to 1.2.4
+* Updated gem webrat to 0.7.0
+* Updated gem nokogiri to 1.4.1
+* Updated gem cucumber to 0.6.4
+* Updated gem echoe to 4.3
+* Updated gem rspec to 1.3.0
+* Updated gem rspec-rails to 1.3.0
+* Updated gem after_commit to 1.0.6
+* Updated gem delayed_job to 2.0.3
+* Updated gem thin to 1.2.7
+* Updated gem riddle to 1.0.10
+
+Version: 0.9.3-0      2010-03-10
+* Update Apache to 2.2.14
+* Update Redmine to 0.9.3
+
+Version: 0.9.2-0        2010-02-10
+* Updated Redmine to 0.9.2
+* Included Digest-SHA1 perl module required for "Enable WS for repository management" option in Redmine.
+* Updated Ruby Enterprise Edition to 1.8.7-2010.01 (linux and OS X)
+* Updated Ruby to 1.8.7-p72 (windows)
+* Updated Phussion Passenger to 2.2.9 (linux and OS X)
+* Updated gem sqlite3-ruby to 1.2.5
+* Updated gem memcache-client to 1.7.8 (linux and OS X)
+* Updated gem rack to 1.1.0
+* Added gem rack-test 0.5.3
+
+Version: 0.9.1-0        2010-02-02
+* Updated Redmine to 0.9.1
+* Fixed irb issue on OS X
+* Fixed ImageMagick coders issue
+
+Version: 0.8.7-0        2009-12-01
+* Updated Redmine to 0.8.7
+
+* Added Ruby Enterprise Edition 1.8.7-2009.10 (linux and OS X)
+* Fixed Ruby library path in linux-x64
+
+* Updated Git to 1.6.5
+* Updated MySQL to 5.1.30 (linux and OS X)
+* Updated MySQL to 5.0.83 (windows)
+* Updated Nginx to 0.7.64
+* Updated rubygems to 1.3.5
+* Updated subversion to 1.6.6
+
+* Added gem thin 1.2.4
+* Added gem delayed_job 1.8.4
+* Added gem thinking-sphinx 1.3.3
+* Added gem after_commit 1.0.2
+* Added gem riddle 0.9.8.1231.0
+* Added gem json_pure to 2.0.3
+
+* Updated gem rack to 1.0.1
+* Updated gem rails to 2.3.4
+* Updated gem actionmailer to 2.3.4
+* Updated gem actionpack to 2.3.4
+* Updated gem activerecord to 2.3.4
+* Updated gem activeresource to 2.3.4
+* Updated gem activesupport to 2.3.4
+
+* Updated gem capistrano to 2.5.9
+* Updated gem mysql to 2.8.1
+* Updated gem gruff to 0.3.6
+* Updated gem net-ssh to 2.0.15
+* Updated gem hoe to 2.3.3
+* Updated gem rubyforge to 2.0.3
+* Updated gem event-machine to 0.12.10
+* Updated gem god to 0.7.18 (linux and OS X)
+* Updated gem rmagick 2.12.2 (linux and OS X)
+* Updated gem memcache-client to 1.7.5 (linux and OS X)
+* Updated gem ZenTest to 4.1.4
+* Updated gem rspec to 1.2.9
+* Updated gem rspec-rails to 1.2.9
+* Updated gem webrat to 0.5.3
+* Updated gem nokogiri to 1.4.0
+* Updated gem cucumber to 0.4.3
+* Updated gem treetop to 1.4.2
+* Updated gem polyglot to 0.2.9
+* Updated gem term-ansicolor to 1.0.4
+* Updated gem hpricot to 0.8.2
+* Updated gem echoe to 3.2
+
+* Removed gem beanstalk-client
+
+Version: 0.8.6-0        2009-11-09
+* Updated Redmine to 0.8.6
+* Allow long passwords in Virtual Machines
+* Include Git 1.6.3.1
+
+Version: 0.8.5-0        2009-09-21
+* Updated Redmine to 0.8.5
+
+Version: 0.8.4-1        2009-06-09
+* Fix MySQL issue when a previous MySQL instance is installed.
+* Updated ImageMagick to 6.5.2-9 (unix)
+* Updated ImageMagick to 6.4.8-6-Q8 (windows)
+* Updated Ruby to 1.8.7-p160 (unix)
+* Updated Ruby to 1.8.7-p72 (windows)
+* Updated Subversion to 1.6.2
+* Updated rubygems to 1.3.4
+* Updated gem actionmailer to 2.3.2
+* Updated gem activesupport to 2.3.2
+* Updated gem activerecord to 2.3.2
+* Updated gem activeresource to 2.3.2
+* Updated gem eventmachine to 0.12.8
+* Updated gem fastthread to 1.0.7 (linux,osx)
+* Updated gem memcache-client to 1.7.2
+* Updated gem net-sftp to 2.0.2
+* Updated gem net-ssh to 2.0.11
+* Updated gem net-ssh-gateway to 1.0.1
+* Updated gem rake to 0.8.7
+* Updated gem rails to 2.3.2
+* Updated gem rmagick to 2.9.2 (linux, osx)
+* Updated gem rmagick to 2.9.0 (mswin32)
+* Updated gem rubyforge to 1.0.3
+* Updated gem sqlite3-ruby to 1.2.4 (linux, osx)
+* Updated gem sqlite3-ruby to 1.2.3 (mswin32)
+* Removed gem piston
+* Updated gem rspec to 1.2.6
+* Added gem rspec-rails 1.2.6
+* Updated gem webrat to 0.4.4
+* Added gem nokogiri 1.3.0
+* Added gem cucumber 0.3.9
+* Added gem term-ansicolor 1.0.3
+* Added gem treetop 1.2.5
+* Added gem builder 2.1.2
+* Added gem diff-lcs 1.1.2
+* Added gem polyglot 0.2.5
+
+Version: 0.8.4-0        2009-05-22
+* Updated Redmine to 0.8.4
+
+Version: 0.8.3-0        2009-04-17
+* Updated Redmine to 0.8.3
+
+Version: 0.8.1-2        2009-03-09
+* Fix issue checking permissions for root.
+
+Version: 0.8.1-1        2009-02-18
+* Downgrade MySQL to version 5.0.51, as there are compatibility issues with
+gem_mysql
+
+Version: 0.8.1-0        2009-02-17
+* Updated Redmine to 0.8.1.
+
+Version: 0.8.0-0        2009-01-12
+* Updated Redmine to 0.8.0.
+
+Version: 0.7.3-2        2008-09-21
+* Configure cluster with "prefix" option.
+* Support to install as module over RubyStack
+
+Version: 0.7.3-1        2008-08-12
+* Fixed installation on Linux 64 bits systems
+
+Version: 0.7.3		2008-07-08
+* Updated Redmine to 0.7.3
+
+Version: 0.7.2		2008-06-23
+* Updated Redmine to 0.7.2
+
+Version: 0.7.0_RC1		2008-03-17
+* Updated Redmine to 0.7.0_RC1
+* Include ruby console
+
+Version: 0.6.4		2008-03-14
+* Updated Redmine to 0.6.4
+
+Version: 0.6.3-3	2008-03-05
+* Fixed installation bug related to SELinux
+
+Version: 0.6.3-2	2008-01-25
+* Added support for Mac OS X x86, OS X PowerPC and
+Windows.
+
+Version: 0.6.3-1	2008-01-02
+* Fixed MySQL timing bug
+
+Version: 0.6.3		2007-12-26
+* Updated Redmine to 0.6.3.
+
+Version: 0.6.1		2007-12-14
+* Updated Redmine to 0.6.1.
+
+Version: 0.6.0-1	2007-11-12
+* Updated Rails to 1.2.5.
+
+Version: 0.6.0		2007-11-09
+* Initial release, bundles Apache 2.2.4, Ruby 1.8.6,
+rails 2.0.2, rubygems 0.9.4, Subversion 1.4.5, MySQL
+5.0.45 and Redmine 0.6.0.

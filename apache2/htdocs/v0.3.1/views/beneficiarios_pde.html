@@ -1,0 +1,485 @@
+<style>
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+        font-weight: 700 !important;
+    }
+</style>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+
+    <h3 class="h5">Beneficiários PDE</h3>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <button class="btn btn-sm btn-outline-secondary print_act">
+            Imprimir
+        </button>
+
+        <button class="btn btn-sm ml-2 btn-dark" ng-click="exportExcel()">
+            Export Excel
+        </button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.print_act').click(function() {
+            window.print();
+        })
+    })
+</script>
+
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4 p-2 mr-4 n_print" style="max-width: 450px !important;">
+                <div class="card p-3 box-shadow border-0">
+                    <form name="f_provincias" method="get" id="f_provincias">
+                        <select class="custom-select d-block w-100" id="p" name="p" ng-bind-html="response_planos">
+                        </select>
+                    </form>
+                    <script>
+                        $(document).ready(function () {
+                            // Links heligth
+                            $("#p").change(function () {
+                                var action = this.value;
+                                location.assign("#relatorio/beneficiarios/pde/" + p);
+                            });
+                        });
+
+                        document.getElementById('f_provincias').p.onchange = function () {
+                            var p = this.value;
+                            document.getElementById('f_provincias').action = p;
+                            location.assign("#relatorio/beneficiarios/pde/" + p);
+                        };
+                    </script>
+
+
+
+                </div>
+            </div>
+            <div class="col-md-7 p-2 mr-4" style="min-width: 450px !important;">
+                <div class="pt-2">
+                    Plano Estratégico:
+                    <h5>{{response_plano.nome_plano}}</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row p-2">
+            <nav class="mt-2">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="beneficiarios-tab" data-toggle="tab" href="" data-target="#bnf-beneficiarios"
+                        role="tab" aria-controls="nav-beneficiarios" aria-selected="true">Género e Faixa Etária </a>
+
+                    <a class="nav-item nav-link" id="materiais-tab" data-toggle="tab" href="" data-target="#bnf-materiais"
+                        role="tab" aria-controls="nav-materiais" aria-selected="false">Materiais e Equipamentos</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row tab-content col-12">
+            <div class="tab-pane fade  show active w-100" id="bnf-beneficiarios" role="tabpanel" aria-labelledby="beneficiarios-tab">
+                <div class="row">
+                    <div class="col-md-4 p-2 mr-4" style="max-width: 450px !important;">
+                        <div class="card p-3 box-shadow border-0">
+                            <div class="graf-title">
+                                <p
+                                    style="cursor: default; color:rgb(117, 117, 117) ; user-select: none;-webkit-font-smoothing: antialiased; font-family: Roboto;font-size: 16px;">
+                                    Beneficiários por Género
+                                </P>
+                                <p
+                                    style=" margin-top: -18px; color:rgb(189, 189, 189);; cursor: default; user-select: none;-webkit-font-smoothing: antialiased;font-family: Roboto;font-size: 14px">
+                                    Gráfico Circular - Beneficiários PDE
+                                </p>
+                            </div>
+                            <div>
+                                <div id="grafGenero" style="height: 400px;">
+                                    <div class="col-6 col-lg-7 m-auto" ng-if="loading;">
+                                        <div class="spinner-grow text-warning" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow text-success" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow text-danger" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 p-2 mr-4" style="min-width: 450px !important;">
+                        <div class="card p-3 box-shadow border-0">
+                            <div class="graf-title">
+                                <p
+                                    style="cursor: default; color:rgb(117, 117, 117) ; user-select: none;-webkit-font-smoothing: antialiased; font-family: Roboto;font-size: 16px;">
+                                    Beneficiários por Faixa Etária
+                                </P>
+                                <p
+                                    style=" margin-top: -18px; color:rgb(189, 189, 189);; cursor: default; user-select: none;-webkit-font-smoothing: antialiased;font-family: Roboto;font-size: 14px">
+                                    Gráfico Circular - Beneficiários PDE
+                                </p>
+                            </div>
+                            <div>
+                                <div id="grafFaixaEtaria" style="height: 400px;">
+                                    <div class="col-5 col-lg-4 m-auto" ng-if="loading;">
+                                        <div class="spinner-grow text-warning" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow text-success" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow text-danger" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 p-2 mr-4" style="max-width: 450px !important;">
+                        <div class="card p-3 box-shadow border-0">
+                            <div>
+                                <p
+                                    style="cursor: default; color:rgb(117, 117, 117) ; user-select: none;-webkit-font-smoothing: antialiased; font-family: Roboto;font-size: 16px;">
+                                    Beneficiários por Género
+                                </P>
+                                <table class="table table-striped table-sm" id="tableData">
+                                    <thead>
+                                        <tr>
+                                            <th class="d-none" colspan="2">Plano Estratégico: {{response_plano.nome_plano}}</th>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr>
+                                            <th class="d-none" colspan="2">Beneficiários por Género</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Homens</th>
+                                            <th>Mulheres</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="response in response">
+                                        <tr ng-repeat="data in response.b_genero">
+                                            <td>
+                                                {{data._homens}}
+                                            </td>
+                                            <td>
+                                                {{data._mulheres}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 p-2">
+                        <div class="card p-3 box-shadow border-0" style=" min-width: 260px; ">
+                            <div>
+                                <p
+                                    style="cursor: default; color:rgb(117, 117, 117) ; user-select: none;-webkit-font-smoothing: antialiased; font-family: Roboto;font-size: 16px;">
+                                    Beneficiários por Faixa Etária
+                                </P>
+                                <table class="table table-striped table-sm" id="tableData_2">
+                                    <thead>
+                                        <tr>
+                                            <th class="d-none" colspan="3">Beneficiários por Faixa Etária</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Projecto</th>
+                                            <th>Faixa Etária</th>
+                                            <th>Beneficiários</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="response in response">
+                                        <tr ng-repeat="data in response.b_faixaEtaria">
+                                            <td>{{data._projecto}}</td>
+                                            <td>{{data._faixaEtaria}}</td>
+                                            <td>{{data._beneficarios}}</td>
+                                        </tr>
+                                        <tr ng-repeat="data in response.b_genero">
+                                            <th>Total dos Beneficiários</th>
+                                            <td>
+                                                <b>
+                                                    Homens -> {{data._homens}}
+                                                </b>
+                                            </td>
+                                            <td>
+                                                <b>
+                                                    Mulheres -> {{data._mulheres}}
+                                                </b>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="col-5 col-lg-4 m-auto" ng-if="loading;">
+                                    <div class="spinner-grow text-warning" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="spinner-grow text-success" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="spinner-grow text-danger" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade w-100" id="bnf-materiais" role="tabpanel" aria-labelledby="materiais-tab">
+                <div class="row">
+                    <div class="col-md-8 p-2 mr-4" style="min-width: 450px !important;">
+                        <div class="card p-3 box-shadow border-0">
+                            <div class="graf-title">
+                                <p
+                                    style="cursor: default; color:rgb(117, 117, 117) ; user-select: none;-webkit-font-smoothing: antialiased; font-family: Roboto;font-size: 16px;">
+                                    Beneficiários Materiais e Equipamentos
+                                </P>
+                                <p
+                                    style=" margin-top: -18px; color:rgb(189, 189, 189);; cursor: default; user-select: none;-webkit-font-smoothing: antialiased;font-family: Roboto;font-size: 14px">
+                                    Gráfico de Barras - Beneficiários PDE
+                                </p>
+                            </div>
+                            <div>
+                                <div id="grafMateriasEq" style="height: 400px;">
+                                    <div class="col-5 col-lg-4 m-auto" ng-if="loading;">
+                                        <div class="spinner-grow text-warning" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow text-success" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow text-danger" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 p-2">
+                        <div class="card p-3 box-shadow border-0" style=" min-width: 260px; ">
+                            <div>
+                                <p
+                                    style="cursor: default; color:rgb(117, 117, 117) ; user-select: none;-webkit-font-smoothing: antialiased; font-family: Roboto;font-size: 16px;">
+                                    Materiais e Equipamentos
+                                </P>
+                                <table class="table table-striped table-sm" id="tableData_3">
+                                    <thead>
+                                        <tr>
+                                            <th class="d-none" colspan="3">Materiais e Equipamentos</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Projecto</th>
+                                            <th>Material</th>
+                                            <th>Realizado / Beneficiários</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="response in response">
+                                        <tr ng-repeat="data in response.b_material">
+                                            <td>{{data._projecto}}</td>
+                                            <td>{{data._variavel}}</td>
+                                            <td>{{data._beneficarios}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="col-5 col-lg-4 m-auto" ng-if="loading;">
+                                    <div class="spinner-grow text-warning" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="spinner-grow text-success" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="spinner-grow text-danger" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-repeat='response in response'>
+    <div ng-repeat="data in response.data_graph">
+        <input type="hidden" id="_graficoInfo" value="{{data.infoGrafico}}">
+        <input type="hidden" id="_materalVariavel" value="{{data.b_Material._variavel}}">
+        <input type="hidden" id="_materalBeneficiarios" value="{{data.b_Material._total}}">
+    </div>
+    <div ng-repeat='data in response.b_genero'>
+
+        <input type="hidden" id="_grafHomens" value="{{data._homens}}">
+        <input type="hidden" id="_grafMulheres" value="{{data._mulheres}}">
+
+        <span ng-bind-html="load"></span>
+
+        <script language="JavaScript">
+            function load() {
+                // Global Var's
+                var _grafHomens = document.getElementById("_grafHomens").value;
+                var _grafMulheres = document.getElementById("_grafMulheres").value;
+                var _dataGraphic = document.getElementById("_graficoInfo").value;
+
+                var _dataGraphicMaterialVars = document.getElementById("_materalVariavel").value;
+                var _dataGraphicMaterialValues = document.getElementById("_materalBeneficiarios").value;
+
+                _grafHomens = _grafHomens.split(',').map(function (item) {
+                    return parseInt(item, 10);
+                });
+
+                _grafMulheres = _grafMulheres.split(',').map(function (item) {
+                    return parseInt(item, 10);
+                });
+
+                _dataGraphic = _dataGraphic.split(',').map(function (item) {
+                    return parseInt(item, 10);
+                });
+
+                _dataGraphicMaterialVars = _dataGraphicMaterialVars.split(',').map(function (item) {
+                    return parseInt(item, 10);
+                });
+
+                _dataGraphicMaterialValues = _dataGraphicMaterialValues.split(',').map(function (item) {
+                    return parseInt(item, 10);
+                });
+
+                // Grafico de Beneficiarios por Genero
+                google.charts.load("current", { packages: ["corechart"] });
+                google.charts.setOnLoadCallback(drawChart_Genero);
+                function drawChart_Genero() {
+                    var grafGeneroData = google.visualization.arrayToDataTable([
+                        ['', 'Beneficiários por Género'],
+                        [_grafHomens[0]+' Homens', _grafHomens[0]],
+                        [_grafMulheres[0]+' Mulheres', _grafMulheres[0]]
+                    ]);
+
+                    var options = {
+                        pieHole: 0.6,
+                        legend: { position: 'bottom' },
+                        chartArea: { top: 10, width: '75%', height: '75%', backgroundColor: 'transparent' },
+                        animation: {
+                            duration: 1000,
+                            easing: 'out',
+                        },
+                        vAxis: { minValue: 0, maxValue: 1000 },
+                         backgroundColor: { fill: 'transparent' }
+                    };
+
+                    var chart = new google.visualization.PieChart(document.getElementById('grafGenero'));
+                    chart.draw(grafGeneroData, options);
+                }
+
+
+                // Grafico de Beneficiarios por Faixa Etaria
+                google.charts.setOnLoadCallback(drawChart_FaixaEtaria);
+                function drawChart_FaixaEtaria() {
+                    var grafFaixaEtariaData = google.visualization.arrayToDataTable([
+                        ['', 'Beneficiários por Faixa Etária'],
+                        ['(crianças) -> ' + _dataGraphic[0], _dataGraphic[0]],
+                        ['(0-5) Homens e Mulheres -> ' + _dataGraphic[1], _dataGraphic[1]],
+                        ['(6-14) Homens e Mulheres -> ' + _dataGraphic[2], _dataGraphic[2]],
+                        ['(15-24) Homens e Mulheres -> ' + _dataGraphic[3], _dataGraphic[3]],
+                        ['(25-49) Homens e Mulheres -> ' + _dataGraphic[4], _dataGraphic[4]],
+                        ['(>50) Homens e Mulheres -> ' + _dataGraphic[5], _dataGraphic[5]]
+                    ]);
+
+                    var options = {
+                        pieHole: 0.6,
+                        legend: { position: 'bottom' },
+                        chartArea: { top: 10, width: '75%', height: '75%', backgroundColor: 'transparent' },
+                        animation: {
+                            duration: 1000,
+                            easing: 'out',
+                        },
+                        vAxis: { minValue: 0, maxValue: 1000 },
+                         backgroundColor: { fill: 'transparent' }
+                    };
+
+                    var chart2 = new google.visualization.PieChart(document.getElementById('grafFaixaEtaria'));
+                    chart2.draw(grafFaixaEtariaData, options);
+                }
+
+                // Grafico de Material
+                google.charts.setOnLoadCallback(drawChart);
+                function drawChart() {
+
+                    var arr = [];
+                    obj = {};
+                    var fruits = ['banana', 'apple', 'mango'];
+                    var label = 'Fruits';
+
+                    var data = google.visualization.arrayToDataTable([
+                        ["", "Uni", { role: "style" }],
+                        ["Quantidade de livros", _dataGraphicMaterialValues[0], "rgb(219, 68, 55)"],
+                        ["Quantidade de equipamento", _dataGraphicMaterialValues[1], "rgb(66, 133, 244)"],
+                        ["Quantidade de mobiliario", _dataGraphicMaterialValues[2], "rgb(27, 158, 119)"],
+                        ["Numero de Curriculos", _dataGraphicMaterialValues[3], "rgb(255, 153, 1)"]
+                    ]);
+
+                    // for(var i= 0; i < _dataGraphicMaterialVars.length; i++){
+                    //     var data = google.visualization.arrayToDataTable([
+                    //         ["", "Beneficiários", { role: "style" }],
+                    //         ["Quantidade de livros", 8.94, "rgb(219, 68, 55)"],
+                    //         ["Quantidade de equipamento", 10.49, "rgb(66, 133, 244)"],
+                    //         ["Quantidade de mobiliario", 19.30, "rgb(27, 158, 119)"],
+                    //         ["Numero de Curriculos", 21.45, "rgb(255, 153, 1)"]
+                    //     ]);
+                    // }
+
+                    // for (var i = 0; i < fruits.length; i++) {
+                    //     var dataObj = {};
+
+                    //     dataObj['data'] = fruits[i];
+                    //     arr.push(obj);
+                    // }
+
+                    var view = new google.visualization.DataView(data);
+                    view.setColumns([0, 1,
+                        {
+                            calc: "stringify",
+                            sourceColumn: 1,
+                            type: "string",
+                            role: "annotation"
+                        },
+                        2]);
+
+                    var options = {
+                        width: 600,
+                        height: 400,
+                        chartArea: { top: 10, width: '100%', height: '80%', backgroundColor: 'transparent' },
+                        bar: { groupWidth: "45%" }
+                    };
+                    var chart = new google.visualization.ColumnChart(document.getElementById("grafMateriasEq"));
+                    chart.draw(view, options);
+                }
+            }
+
+        </script>
+
+    </div>
+</div>

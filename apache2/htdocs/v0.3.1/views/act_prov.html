@@ -1,0 +1,121 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h3 class="h5">Actividades Por Província</h3>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="" target="_blank" class="btn btn-sm btn-outline-secondary">
+            Imprimir
+        </a>
+    </div>
+</div>
+
+
+
+<div class="row mb-4">
+    <div class="col-md-11">
+        <div class="card p-2 box-shadow border-0 rounded-0 bg-white">
+            <div class="row m-2">
+                <div class="d-flex">
+                    <div class="p-2">
+                        <form name="f_provincias" method="get" id="f_provincias" class="mt-2 mr-2">
+                            <select class="custom-select d-block w-100" id="p" name="p">
+                                <option value="">Províncias...</option>
+                                <option value="Maputo-Cidade">Maputo-Cidade</option>
+                                <option value="Maputo-Província">Maputo-Província</option>
+                                <option value="Gaza">Gaza</option>
+                                <option value="Inhambane">Inhambane</option>
+                                <option value="Sofala">Sofala</option>
+                                <option value="Manica">Manica</option>
+                                <option value="Zambézia">Zambézia</option>
+                                <option value="Tete">Tete</option>
+                                <option value="Nampula">Nampula</option>
+                                <option value="Niassa">Niassa</option>
+                                <option value="Cabo Delgado">Cabo Delgado</option>
+                            </select>
+                        </form>
+                        <script>
+                            $(document).ready(function () {
+                                // Links heligth
+                                $("#p").change(function () {
+                                    var action = this.value;
+                                    window.location.assign("#relatorio/actividade/provincia/" + p);
+                                });
+                            });
+                            document.getElementById('f_provincias').p.onchange = function () {
+                                var p = this.value;
+                                document.getElementById('f_provincias').action = p;
+                                window.location.assign("#relatorio/actividade/provincia/" + p);
+                            };
+                        </script>
+                    </div>
+
+                    <div class="p">
+                        Filtro
+                        <br>
+                        <div class="btn-group">
+                            <div class="dropdown mr-2">
+                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Por Ano: <b>{{selectYear}}</b>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByYear('todos')">Todos</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByYear(data.ano)"
+                                        ng-repeat='data in response_anoFilter'>{{data.ano}}</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown mr-2">
+                                <button class="btn btn-sm btn-light border-bottom dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Por Periodo: <b>{{selectPeriodo}}</b>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('1T')">1 Trimestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('2T')">2 Trimestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('3T')">3 Trimestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('3T')">4 Trimestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('1S')">1 Semestre</a>
+                                    <a class="dropdown-item" style="cursor:pointer" ng-click="getByPeriodo('2S')">2 Semestre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive tableFixHead">
+                <table class="table display datatable-responsive table-bordered table-striped table-sm" ng-if="!loading;">
+                    <thead>
+                        <tr>
+                            <div class="border-0 p-2" style="font-size: medium; font-weight: 400;">Província:
+                                <b>{{nProvincia}}
+                                    <br>
+                            </div>
+                        </tr>
+                        <tr class="p-2">
+                            <th>Nome da actividade</th>
+                            <th>Projecto</th>
+                            <th style=" min-width: 130px;">Província</th>
+                            <th>Indicador</th>
+                            <th>Meta</th>
+                            <th>Realizado</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-bind-html="response">
+                    </tbody>
+                </table>
+
+                <div class="col-3 col-lg-2 m-auto" ng-if="loading;">
+                    <div class="spinner-grow text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <span ng-if="response" ng-bind-html="loadtable"></span>
+        </div>
+    </div>
+</div>

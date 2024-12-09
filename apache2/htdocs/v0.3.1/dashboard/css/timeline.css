@@ -1,0 +1,59 @@
+.my_timeline{
+    position: relative;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.my_timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #dee2e6;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  margin-left: -2px;
+}
+
+/* Container around content */
+.my_timeline-container {
+  padding: 6px 18px;
+  padding-right: 0px;
+  position: relative;
+  background-color: inherit;
+}
+
+/* The circles on the timeline */
+.my_timeline-icon{
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    background-color: #fff;
+    border: 1px solid #fff;
+    left: -6px;
+    top: 0px;
+    z-index: 1;
+}
+
+.my_timeline-icon i {
+    display: block;
+    line-height: 32px;
+    top: 0;
+}
+
+/* Place the container to the left */
+.left {
+  left: 10;
+}
+
+/* The actual content */
+.my_timeline-content {
+  padding: 0px 16px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
